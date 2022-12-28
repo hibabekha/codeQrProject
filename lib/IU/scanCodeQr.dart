@@ -29,10 +29,8 @@ class _ScanCodeQrState extends State<ScanCodeQr> {
       appBar: AppBar(
         title: Text("Scan QR Code"),
       ),
-      body: StreamBuilder<List<Visitor>>(
-        stream: _visitorBloc.visitorListStream,
-        builder: (BuildContext context, AsyncSnapshot<List<Visitor>> snapshot) {
-          return Center(
+      body:
+           Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -277,9 +275,8 @@ class _ScanCodeQrState extends State<ScanCodeQr> {
                 SizedBox(height: 150)
               ],
             ),
-          );
-        },
-      ),
+          )
+
     );
   }
 
