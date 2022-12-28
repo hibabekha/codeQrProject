@@ -35,7 +35,12 @@ class VisitorBloc {
   }
 
   _savevisitor(Visitor visitor) async{
-    _visitorListString = sharedPreferences.getStringList("visitorListData")!.toList();
+  if(sharedPreferences.getStringList("visitorListData")?.toList() != null  ) {
+      _visitorListString =
+          sharedPreferences.getStringList("visitorListData")!.toList();
+    }
+    String ne
+    
     String newVisitorToJson = jsonEncode(visitor);
 
     _visitorListString.add(newVisitorToJson);
